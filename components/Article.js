@@ -108,7 +108,17 @@ const data = [
 /*
   Step 1: Write a component called 'articleMaker' to create an article.
   Your component is a function that takes an article object as its only argument,
-  and returns a DOM node looking like the one below: */
+  and returns a DOM node looking like the one below:
+  
+  <div class="article">
+    <h2>{title of the article}</h2>
+    <p class="date">{date of the article}</p>
+
+    {three separate paragraph elements}
+
+    <span class="expandButton">+</span>
+  </div>
+  */
 
   function articleMaker(article) {
   const artDiv = document.createElement('div')
@@ -139,16 +149,7 @@ const data = [
   toggleBtn.classList.add('expandButton')
   
 
-  /* <div class="article">
-    <h2>{title of the article}</h2>
-    <p class="date">{date of the article}</p>
-
-    {three separate paragraph elements}
-
-    <span class="expandButton">+</span>
-  </div>
-
-  Step 2: Still inside `articleMaker`, add an event listener to the span.expandButton.
+  /* Step 2: Still inside `articleMaker`, add an event listener to the span.expandButton.
   This listener should toggle the class 'article-open' on div.article. */
 
   toggleBtn.addEventListener('click', () => {
